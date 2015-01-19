@@ -25,7 +25,7 @@
 				}
 			},
 			{
-				cat:'panle,', 
+				cat:'panel', 
 				name:'.footer',
 				css:{
 					width:'100px', color:'blue', 'background-color':'#887'
@@ -80,7 +80,7 @@
 				}
 			},
 			{
-				cat:'panle', 
+				cat:'panel', 
 				name:'footer-sub-block',
 				css:{
 					width:'100px', color:'blue', 'background-color':'#887'
