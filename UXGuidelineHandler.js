@@ -2,15 +2,13 @@
 	'use strict';
 
 
-	var UXGuidelineHandler = function ( data ) {
-		this.data = data;
+	var UXGuidelineHandler = function () {
+		this.data;
 		this.ctnr = $('.item-ctnr');
 		this.items = [];
 		this.filterInput = $('.filter-input');
 		this.filterEles = $('.filter-input');
 		this.numOfEles = $('.num-of-eles');
-
-		this.init( this.data );
 	};
 
 
@@ -19,6 +17,9 @@
 		
 		var input, i, item,
 			self = this;
+
+		this.data = data;
+		this.filterInput.focus();
 	
 		for(i in data.elements){
 			item = new Item(data.elements[i]);
