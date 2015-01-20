@@ -5,18 +5,20 @@
 		this.data;
 	};
 
-	DataHandler.prototype.http = function(url, reqType, callback){
-		$.ajax({
+	DataHandler.prototype.http = function(url, reqType, callback, inputData){
+		
+		var requestMap = {
 			url: url,
-			type: reqType,
-			dataType: 'json',
+			type:reqType,
+			dataType:'json',
 			success: function( data ){
 				callback( data );
 			}
-		})
-		.fail(function(err){
-			console.log(err);
-		});
+		};
+
+		if( inputData ) requestMap.data = inputData;
+		$.ajax( requestMap ).fail(function( err ){ console.log( err ); });
+		return this;
 	};
 
 	window.DataHandler = DataHandler;

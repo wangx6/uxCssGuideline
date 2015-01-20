@@ -1,4 +1,4 @@
-( function( $, window ){
+(function($, window){
 	'use strict';
 
 	var Item = function( data ){
@@ -10,6 +10,7 @@
 		this.init();
 	};
 
+
 	Item.prototype.init = function(){
 		
 		var self = this,
@@ -19,22 +20,16 @@
 			.html( self.data.name )
 			.appendTo( self.ctnr );
 
-		$('<li>')
-			.html('{')
-			.appendTo( self.ctnr );
+		$('<li>').html('{').appendTo( self.ctnr );
 		for(i in this.data.css){
 			$('<li>')
 				.addClass('css-item')
 				.html( i+': '+this.data.css[i]+';' )
 				.appendTo( self.ctnr );
 		}
-		$('<li>')
-			.html('}')
-			.appendTo( self.ctnr );
+		$('<li>').html('}').appendTo( self.ctnr );
 	};
-
-
 
 	window.Item = Item;
 
-} )(window.jQuery, window);
+})(window.jQuery, window);
