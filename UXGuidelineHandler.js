@@ -53,14 +53,14 @@
 
 	UXGuidelineHandler.prototype.filter = function( filterInput ){
 		
-		var i;
+		var i, temp;
 
 		if(filterInput == ''){
 			this.reset();
 		}else{
 			for(i in this.items){
-				this.items[i].isVisible = this.items[i].item.data.name.indexOf(filterInput) > -1 ||
-										this.items[i].item.data.cat.indexOf(filterInput) > -1 ;
+				temp = this.items[i].item.data.name + this.items[i].item.data.cat;
+				this.items[i].isVisible = temp.indexOf(filterInput) > -1;		
 			}
 		}
 		

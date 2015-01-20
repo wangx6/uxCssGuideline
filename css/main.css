@@ -1,22 +1,6 @@
-body, h1{
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-h3{
-	margin-bottom: 0;
-	color: green;
-}
-.main-ctnr{
-	padding: 20px;
-}
-li{
-	list-style: none;
-}
-.css-item{
-	padding-left: 20px;
-}
-.filter-input{
-	padding: 5px;
-	width: 300px;
-}
+body, h1{ margin: 0; padding: 0;border: 0; }
+h3{	margin-bottom: 0; color: green; }
+.main-ctnr{ padding: 20px;}
+li{ list-style: none;}
+.css-item{ padding-left: 20px; }
+.filter-input{ padding: 5px; width: 300px; margin-top: 20px;}
